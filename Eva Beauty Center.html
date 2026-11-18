@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eva Beauty Center | صالون تجميل وعناية بالبشرة والشعر في الزرقاء</title>
+<meta name="description" content="اكتشفي تجربة الجمال والعناية الفاخرة في Eva Beauty Center بالزرقاء الجديدة. خدمات الشعر والبشرة والأظافر والبدكير وعروض البكج الملكي. احجزي موعدك الآن.">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--s1:#0D0D0D;--s2:#171717;--gold:#D4AF37;--champ:#F3DFA0;--ivory:#FAF7EF;--mut:#a8a190;--ok:#6fcf97;--bad:#eb5757;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:400 16px/1.7 Tajawal,Cairo,sans-serif}
+h1,h2,h3{font-family:Amiri,'Playfair Display',serif;margin:0;color:var(--champ)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:auto;padding:0 18px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#080808ee;border-bottom:1px solid #D4AF3733;backdrop-filter:blur(8px)}
+nav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+nav b{font:700 22px Amiri,serif;color:var(--gold)}
+nav .l{display:flex;gap:14px;font-size:14px;overflow-x:auto;white-space:nowrap;flex:1}
+.btn{display:inline-block;border:1px solid var(--gold);background:linear-gradient(135deg,#D4AF37,#F3DFA0);color:#111;padding:9px 20px;font:700 15px Tajawal,sans-serif;cursor:pointer;border-radius:3px}
+.btn.o{background:none;color:var(--champ)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--champ);outline-offset:2px}
+section{padding:56px 0;border-bottom:1px solid #ffffff12}
+.hero{padding:96px 0 72px;background:radial-gradient(ellipse at 70% 0,#D4AF3724,transparent 60%),var(--s1)}
+.hero h1{font-size:clamp(34px,7vw,60px);line-height:1.25}
+.hero p{max-width:560px;color:var(--mut)}
+.sub{color:var(--gold);letter-spacing:1px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:22px}
+.card{background:var(--s2);border:1px solid #D4AF3740;padding:16px;border-radius:4px}
+.card h3{font-size:19px}
+.price{color:var(--gold);font-weight:700}
+.vip{border:2px solid var(--gold);background:linear-gradient(160deg,#1c1708,#0D0D0D);padding:28px;margin-top:22px;border-radius:4px}
+.vip ul{columns:2;padding-inline-start:18px;margin:10px 0}
+.vip .p{font:700 44px Amiri,serif;color:var(--gold)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tabs button{background:none;border:1px solid #D4AF3755;color:var(--ivory);padding:6px 14px;cursor:pointer;font:inherit;border-radius:20px}
+.tabs button[aria-pressed=true]{background:var(--gold);color:#111}
+label{display:block;margin:10px 0 4px;font-size:14px;color:var(--champ)}
+input,select,textarea{width:100%;background:#0f0f0f;border:1px solid #D4AF3755;color:var(--ivory);padding:10px;font:inherit;border-radius:3px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pick{display:flex;justify-content:space-between;gap:10px;padding:10px;border:1px solid #ffffff1a;margin:6px 0;cursor:pointer;border-radius:3px}
+.pick input{width:auto}
+.pick:has(input:checked){border-color:var(--gold);background:#D4AF3712}
+.tot{font-size:22px;color:var(--gold);font-weight:700}
+.note{font-size:13px;color:var(--mut)}
+.err{color:var(--bad);font-size:13px;min-height:18px}
+.wa{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:#25D366;color:#073;font-weight:700;padding:10px 16px;border-radius:30px}
+#toast{position:fixed;inset-inline:0;top:70px;margin:auto;width:max-content;max-width:90%;background:var(--gold);color:#111;padding:10px 20px;z-index:50;display:none;border-radius:3px}
+footer{padding:30px 0 90px;color:var(--mut);text-align:center}
+/* admin */
+#admin{display:none;background:#101010;min-height:100vh}
+.ad-top{display:flex;gap:10px;align-items:center;padding:12px 18px;background:#000;border-bottom:1px solid #D4AF3744;flex-wrap:wrap}
+.ad-top .t{flex:1;font-weight:700;color:var(--gold)}
+.ad-tabs{display:flex;gap:6px;padding:10px 18px;overflow-x:auto}
+.ad-tabs button{flex:none}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi{background:var(--s2);padding:12px;border-inline-start:3px solid var(--gold)}
+.kpi b{display:block;font-size:24px;color:var(--champ)}
+.kpi small{color:var(--mut)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px;border-bottom:1px solid #ffffff14;text-align:start;white-space:nowrap}
+th{color:var(--gold)}
+.demo{background:#3a2f0a;color:var(--champ);padding:8px 18px;font-size:13px}
+.empty{padding:30px;text-align:center;color:var(--mut)}
+.bar{height:10px;background:var(--gold);display:inline-block;vertical-align:middle;border-radius:2px}
+@media(max-width:600px){nav .l{display:none}.vip ul{columns:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="toast" role="status"></div>
+<div id="site">
+<nav><div class="wrap"><b>Eva</b>
+<div class="l"><a href="#services">خدماتنا</a><a href="#vip">البكج الملكي</a><a href="#book">احجزي موعدك</a><a href="#contact">موقعنا</a></div>
+<a class="btn" href="#book" data-ev="booking_click">احجزي</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="sub">EVA BEAUTY CENTER</p>
+<h1>جمالكِ يستحق عناية استثنائية</h1>
+<p>مساحتكِ الخاصة للهدوء والجمال. خدمات الشعر والعناية بالبشرة والأظافر والمساج والسبا في الزرقاء الجديدة.</p>
+<p><a class="btn" href="#book" data-ev="booking_click">احجزي موعدك الآن</a> <a class="btn o" href="#services">اكتشفي خدماتنا</a></p>
+</div></header>
+
+<section id="vip"><div class="wrap">
+<h2>البكج الملكي VIP</h2>
+<div class="vip"><p class="sub">تجربة متكاملة بسعر ثابت</p>
+<ul><li>صبغة</li><li>تريتمنت</li><li>قص</li><li>سشوار</li><li>مساج 30 دقيقة</li><li>بدكير</li></ul>
+<div class="p">40 <small style="font-size:18px">دينار</small></div>
+<p class="note">السعر ثابت ولا تُحتسب الخدمات المتضمنة بشكل منفصل.</p>
+<button class="btn" id="vipBtn" data-ev="vip_click">احجزي تجربتك الملكية</button></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2>خدماتنا</h2><div class="tabs" id="tabs"></div><div class="grid" id="svcGrid"></div>
+</div></section>
+
+<section id="book"><div class="wrap">
+<h2>احجزي موعدك</h2>
+<p class="note">هذا طلب حجز وليس تأكيداً تلقائياً. سيتواصل معكِ الصالون لتأكيد الموعد. الأسعار المعروضة تقديرية.</p>
+<div class="card" style="margin-top:16px">
+<label>١) اختاري الخدمة أو الخدمات</label><div id="picks"></div>
+<div class="row"><div><label>الاسم *</label><input id="nm" autocomplete="name"></div>
+<div><label>رقم الهاتف *</label><input id="ph" inputmode="tel" autocomplete="tel" placeholder="07XXXXXXXX"></div>
+<div><label>التاريخ المفضل *</label><input id="dt" type="date"></div>
+<div><label>الوقت المفضل *</label><input id="tm" type="time"></div></div>
+<label>ملاحظات إضافية</label><textarea id="nt" rows="2"></textarea>
+<label>كود الخصم (اختياري)</label>
+<div style="display:flex;gap:8px"><input id="cp" placeholder="مثال: EVA10"><button class="btn o" id="cpBtn" type="button">تطبيق</button></div>
+<div class="note" id="cpMsg"></div>
+<p>الإجمالي التقديري: <span class="tot" id="tot">0 دينار</span></p>
+<div class="note" id="tnote"></div>
+<div class="err" id="err" role="alert"></div>
+<button class="btn" id="sendBtn" type="button">إرسال طلب الحجز عبر واتساب</button>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<h2>موقعنا وتواصل معنا</h2>
+<div class="grid">
+<div class="card"><h3>العنوان</h3><p>الزرقاء الجديدة – مجمع القبس، الأردن</p><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Eva+Beauty+Center+Zarqa" target="_blank" rel="noopener">الاتجاهات</a></div>
+<div class="card"><h3>الهاتف</h3><p><a href="tel:0797990377" data-ev="call_click">0797990377</a><br><a href="tel:0781788895" data-ev="call_click">0781788895</a></p></div>
+<div class="card"><h3>تابعينا</h3><p><a href="https://wa.me/962797990377" data-ev="whatsapp_click">واتساب</a> · <a href="https://www.instagram.com/eva_beauty_center_jo/" target="_blank" rel="noopener" data-ev="instagram_click">إنستغرام</a> · فيسبوك: Eva Beauty Centre</p></div>
+</div></div></section>
+<footer>© Eva Beauty Center · <a href="#admin" id="adminLink">لوحة الإدارة (تجريبية)</a></footer>
+<a class="wa" href="https://wa.me/962797990377" data-ev="whatsapp_click">واتساب</a>
+</div>
+
+<div id="admin">
+<div class="ad-top"><span class="t">لوحة إدارة Eva</span><a class="btn o" href="#">الموقع</a></div>
+<div class="demo">وضع تجريبي: لا توجد مصادقة ولا قاعدة بيانات حقيقية. البيانات محفوظة في هذا المتصفح فقط. يجب ربط Supabase Auth وRLS قبل الاستخدام الفعلي.</div>
+<div class="ad-tabs" id="adTabs"></div>
+<div class="wrap" id="adBody" style="padding-top:8px;padding-bottom:40px"></div>
+</div>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+var store={get:function(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var DEF=[
+["الشعر والألوان","صبغة + تريتمنت",20],["الشعر والألوان","هايلايت قصير",30],["الشعر والألوان","هايلايت وسط",40],["الشعر والألوان","هايلايت طويل",50],
+["الشعر والألوان","بروتين قصير",25],["الشعر والألوان","بروتين وسط",30],["الشعر والألوان","بروتين طويل",40],["الشعر والألوان","قص + سشوار",10],
+["علاجات الشعر","تريتمنت كيون",8],["علاجات الشعر","ديتوكس الشعر",6],
+["العناية بالبشرة","تنظيف بشرة عادي",15],["العناية بالبشرة","ديتوكس بشرة",20],
+["الأظافر والبدكير","بدكير مع لون",10],["الأظافر والبدكير","بدكير بدون لون",8],["الأظافر والبدكير","جلسة بارافين أو بديكير علاجي",5],["الأظافر والبدكير","جل كلر",12],
+["السبا والاسترخاء","مساج استرخائي",null],["السبا والاسترخاء","حمام مغربي",null]];
+var services=store.get('eva_svc',null)||DEF.map(function(r,i){return{id:'s'+i,cat:r[0],name:r[1],price:r[2],active:true}});
+services.unshift;
+var VIP={id:'vip',name:'البكج الملكي VIP',price:40};
+var bookings=store.get('eva_bk',[]);
+var events=store.get('eva_ev',[]);
+// Demo coupons (NOT active promotions; real validation must run server-side)
+var COUPONS={EVA10:{pct:10}};
+var coupon=null,cat='الكل';
+var ST=['جديد','قيد المراجعة','تم التأكيد','مكتمل','ملغي'];
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function pr(s){return s.price==null?'السعر عند الاستفسار':s.price+' دينار'}
+function toast(m){var t=$('#toast');t.textContent=m;t.style.display='block';setTimeout(function(){t.style.display='none'},3200)}
+function track(n){events.push({n:n,t:Date.now(),src:new URLSearchParams(location.search).get('utm_source')||'direct',dev:innerWidth<700?'mobile':'desktop'});store.set('eva_ev',events.slice(-500))}
+document.addEventListener('click',function(e){var a=e.target.closest('[data-ev]');if(a)track(a.dataset.ev)});
+
+function renderServices(){
+ var cats=['الكل'].concat(services.map(function(s){return s.cat}).filter(function(v,i,a){return a.indexOf(v)===i}));
+ $('#tabs').innerHTML=cats.map(function(c){return'<button aria-pressed="'+(c===cat)+'" data-c="'+esc(c)+'">'+esc(c)+'</button>'}).join('');
+ $('#svcGrid').innerHTML=services.filter(function(s){return s.active&&(cat==='الكل'||s.cat===cat)}).map(function(s){
+  return'<div class="card"><h3>'+esc(s.name)+'</h3><p class="price">'+pr(s)+'</p><button class="btn o" data-add="'+s.id+'" data-ev="service_click">أضيفي للحجز</button></div>'}).join('');
+ $('#picks').innerHTML=[VIP].concat(services.filter(function(s){return s.active})).map(function(s){
+  return'<label class="pick"><span><input type="checkbox" value="'+s.id+'"> '+esc(s.name)+'</span><span class="price">'+(s.id==='vip'?'40 دينار (سعر ثابت)':pr(s))+'</span></label>'}).join('');
+ calc();
+}
+function selected(){return Array.prototype.map.call(document.querySelectorAll('#picks input:checked'),function(i){return i.value})}
+function calc(){
+ var ids=selected(),sub=0,unp=0,vip=ids.indexOf('vip')>-1;
+ ids.forEach(function(id){if(id==='vip'){sub+=40;return}var s=services.find(function(x){return x.id===id});if(!s)return;if(s.price==null)unp++;else sub+=s.price});
+ var d=coupon?Math.round(sub*coupon.pct)/100:0;
+ $('#tot').textContent=(sub-d).toFixed(2).replace(/\.00$/,'')+' دينار (تقديري)';
+ $('#tnote').textContent=(unp?'يوجد '+unp+' خدمة بسعر عند الاستفسار غير مشمولة في الإجمالي. ':'')+(vip?'تنبيه: لا تضيفي خدمات داخل البكج بشكل منفصل لتجنب التكرار. ':'')+(d?'الخصم: '+d+' دينار.':'');
+ return{ids:ids,sub:sub,d:d,total:sub-d}
+}
+$('#tabs').onclick=function(e){var c=e.target.dataset.c;if(c){cat=c;renderServices()}};
+$('#svcGrid').onclick=function(e){var id=e.target.dataset.add;if(!id)return;var b=document.querySelector('#picks input[value="'+id+'"]');if(b){b.checked=true;calc();toast('تمت الإضافة إلى طلب الحجز');location.hash='#book'}};
+$('#picks').onchange=calc;
+$('#vipBtn').onclick=function(){var b=document.querySelector('#picks input[value="vip"]');b.checked=true;calc();location.hash='#book';toast('تم اختيار البكج الملكي VIP')};
+$('#cpBtn').onclick=function(){var c=$('#cp').value.trim().toUpperCase();if(!c){coupon=null;$('#cpMsg').textContent='';calc();return}
+ if(COUPONS[c]){coupon=COUPONS[c];coupon.code=c;$('#cpMsg').textContent='تم تطبيق الكود (تجريبي، يتم التحقق النهائي من الصالون).';track('coupon_use')}else{coupon=null;$('#cpMsg').textContent='الكود غير صالح أو منتهي.'}calc()};
+$('#sendBtn').onclick=function(){
+ var c=calc(),nm=$('#nm').value.trim(),ph=$('#ph').value.replace(/\s/g,''),dt=$('#dt').value,tm=$('#tm').value,er='';
+ if(!c.ids.length)er='اختاري خدمة واحدة على الأقل.';
+ else if(nm.length<2)er='الرجاء إدخال الاسم.';
+ else if(!/^(\+?962|0)?7[789]\d{7}$/.test(ph))er='رقم الهاتف غير صحيح.';
+ else if(!dt||dt<new Date().toISOString().slice(0,10))er='اختاري تاريخاً صحيحاً.';
+ else if(!tm)er='اختاري الوقت المفضل.';
+ $('#err').textContent=er;if(er)return;
+ var names=c.ids.map(function(id){return id==='vip'?VIP.name:services.find(function(x){return x.id===id}).name});
+ var ref='EVA-'+Date.now().toString(36).toUpperCase();
+ bookings.unshift({ref:ref,name:nm,phone:ph,services:names,est:c.total,date:dt,time:tm,notes:$('#nt').value,admin:'',status:'جديد',created:Date.now()});
+ store.set('eva_bk',bookings);track('booking_submit');
+ var msg='مرحباً Eva Beauty Center 🌟\nطلب حجز جديد (رقم: '+ref+')\nالاسم: '+nm+'\nالهاتف: '+ph+'\nالخدمات: '+names.join('، ')+'\nالتاريخ: '+dt+'\nالوقت: '+tm+(coupon?'\nكود الخصم: '+coupon.code:'')+'\nالإجمالي التقديري: '+c.total+' دينار\nملاحظات: '+($('#nt').value||'—');
+ window.open('https://wa.me/962797990377?text='+encodeURIComponent(msg),'_blank');
+ toast('تم تجهيز طلبكِ. أرسليه عبر واتساب ليتم مراجعته.');
+};
+// ---------- admin (demo) ----------
+var tab='dash';
+var AT=[['dash','نظرة عامة'],['bk','الحجوزات'],['sv','الخدمات والأسعار'],['an','التحليلات']];
+function renderAdmin(){
+ $('#adTabs').innerHTML=AT.map(function(t){return'<button class="btn'+(t[0]===tab?'':' o')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join('');
+ var h='';
+ if(tab==='dash'){
+  var done=bookings.filter(function(b){return b.status==='مكتمل'});
+  var rev=done.reduce(function(a,b){return a+b.est},0);
+  var today=new Date().toISOString().slice(0,10);
+  var k=[['إجمالي الحجوزات',bookings.length],['حجوزات اليوم',bookings.filter(function(b){return b.date===today}).length],['جديدة',bookings.filter(function(b){return b.status==='جديد'}).length],['مؤكدة',bookings.filter(function(b){return b.status==='تم التأكيد'}).length],['ملغاة',bookings.filter(function(b){return b.status==='ملغي'}).length],['الإيراد المسجل (المكتملة فقط)',rev+' د'],['عدد العميلات',bookings.map(function(b){return b.phone}).filter(function(v,i,a){return a.indexOf(v)===i}).length]];
+  h+='<div class="kpis">'+k.map(function(x){return'<div class="kpi"><b>'+x[1]+'</b><small>'+x[0]+'</small></div>'}).join('')+'</div>';
+  var cnt={};bookings.forEach(function(b){b.services.forEach(function(s){cnt[s]=(cnt[s]||0)+1})});
+  var top=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a]}).slice(0,5);
+  h+='<h3>الخدمات الأكثر طلباً</h3>'+(top.length?top.map(function(s){return'<div>'+esc(s)+' <span class="bar" style="width:'+cnt[s]*30+'px"></span> '+cnt[s]+'</div>'}).join(''):'<div class="empty">لا توجد بيانات بعد</div>');
+  h+='<p class="note">الإيراد يُحسب من الحجوزات المكتملة فقط، والقيمة التقديرية للطلبات غير المكتملة لا تُعد إيراداً.</p>';
+ }
+ if(tab==='bk'){
+  h+=bookings.length?'<div class="row" style="margin:10px 0"><input id="q" placeholder="بحث بالاسم أو الهاتف"></div><div class="tw"><table><thead><tr><th>المرجع</th><th>الاسم</th><th>الخدمات</th><th>تقدير</th><th>الموعد</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody id="bkb"></tbody></table></div>':'<div class="empty">لا توجد حجوزات بعد. أرسلي حجزاً تجريبياً من الموقع.</div>';
+ }
+ if(tab==='sv'){
+  h+='<div class="tw"><table><thead><tr><th>الخدمة</th><th>القسم</th><th>السعر (دينار)</th><th>مفعّلة</th></tr></thead><tbody>'+services.map(function(s){return'<tr><td>'+esc(s.name)+'</td><td>'+esc(s.cat)+'</td><td><input style="width:90px" data-p="'+s.id+'" type="number" min="0" value="'+(s.price==null?'':s.price)+'" placeholder="عند الاستفسار"></td><td><input type="checkbox" data-a="'+s.id+'"'+(s.active?' checked':'')+'></td></tr>'}).join('')+'</tbody></table></div><p class="note">ترك السعر فارغاً يعني «السعر عند الاستفسار». البكج الملكي ثابت 40 دينار.</p>';
+ }
+ if(tab==='an'){
+  var n=function(x){return events.filter(function(e){return e.n===x}).length};
+  var sub=n('booking_submit'),wa=n('whatsapp_click');
+  h+='<div class="kpis">'+[['نقرات زر الحجز',n('booking_click')],['نقرات واتساب',wa],['نقرات البكج الملكي',n('vip_click')],['نقرات الخدمات',n('service_click')],['طلبات حجز مرسلة',sub],['استخدام كوبون',n('coupon_use')]].map(function(x){return'<div class="kpi"><b>'+x[1]+'</b><small>'+x[0]+'</small></div>'}).join('')+'</div><p class="note">الأرقام تمثل نشاطكِ أنتِ في هذا المتصفح فقط (تجريبي). نقرات واتساب وطلبات الحجز المرسلة وتأكيد المواعيد مقاييس منفصلة.</p>';
+ }
+ $('#adBody').innerHTML=h;
+ if(tab==='bk'&&bookings.length)drawBk('');
+}
+function drawBk(q){
+ $('#bkb').innerHTML=bookings.filter(function(b){return!q||b.name.indexOf(q)>-1||b.phone.indexOf(q)>-1}).map(function(b){
+  return'<tr><td>'+b.ref+'</td><td>'+esc(b.name)+'</td><td>'+esc(b.services.join('، '))+'</td><td>'+b.est+'</td><td>'+b.date+' '+b.time+'</td><td><select data-s="'+b.ref+'">'+ST.map(function(s){return'<option'+(s===b.status?' selected':'')+'>'+s+'</option>'}).join('')+'</select></td><td><a class="btn o" target="_blank" rel="noopener" href="https://wa.me/962'+b.phone.replace(/^(\+?962|0)/,'')+'">واتساب</a> <button class="btn o" data-d="'+b.ref+'">حذف</button></td></tr>'}).join('');
+}
+$('#adTabs').onclick=function(e){if(e.target.dataset.t){tab=e.target.dataset.t;renderAdmin()}};
+$('#adBody').oninput=function(e){
+ if(e.target.id==='q')drawBk(e.target.value.trim());
+ if(e.target.dataset.p){var s=services.find(function(x){return x.id===e.target.dataset.p});s.price=e.target.value===''?null:Math.max(0,+e.target.value);store.set('eva_svc',services);renderServices()}};
+$('#adBody').onchange=function(e){
+ if(e.target.dataset.s){bookings.find(function(b){return b.ref===e.target.dataset.s}).status=e.target.value;store.set('eva_bk',bookings);toast('تم تحديث الحالة')}
+ if(e.target.dataset.a){services.find(function(x){return x.id===e.target.dataset.a}).active=e.target.checked;store.set('eva_svc',services);renderServices()}};
+$('#adBody').onclick=function(e){var r=e.target.dataset.d;if(r&&confirm('هل أنتِ متأكدة من حذف هذا الحجز؟')){bookings=bookings.filter(function(b){return b.ref!==r});store.set('eva_bk',bookings);renderAdmin()}};
+function route(){var a=location.hash==='#admin';$('#admin').style.display=a?'block':'none';$('#site').style.display=a?'none':'block';if(a)renderAdmin()}
+addEventListener('hashchange',route);
+renderServices();route();track('page_view');
+</script>
+</body>
+</html>
